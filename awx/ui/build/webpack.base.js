@@ -104,7 +104,7 @@ let base = {
             _: 'lodash'
         }),
         new ExtractTextPlugin('css/[name].[hash].css'),
-        new CleanWebpackPlugin([STATIC_PATH, COVERAGE_PATH], {
+        new CleanWebpackPlugin([STATIC_PATH, COVERAGE_PATH, LANGUAGES_PATH], {
             root: UI_PATH,
         }),
         new CopyWebpackPlugin([
