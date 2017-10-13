@@ -2,6 +2,10 @@ const SUPPORTED_LOCALES = ['en', 'es', 'fr', 'ja', 'nl'];
 const DEFAULT_LOCALE = 'en';
 const BASE_PATH = global.$basePath ? `${global.$basePath}languages/` : '/static/languages/';
 
+import config from '../start/config';
+
+console.log(config)
+
 /**
  * The Angular app is manually initialized in order to complete some
  * asynchronous work up front. This function returns a callback so app.js can

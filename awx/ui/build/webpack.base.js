@@ -12,6 +12,7 @@ const UI_PATH = path.resolve(__dirname, '..');
 
 const ASSETS_PATH = path.join(CLIENT_PATH, 'assets');
 const COMPONENTS_PATH = path.join(LIB_PATH, 'components');
+const CONFIG_PATH = path.join(UI_PATH, 'config');
 const COVERAGE_PATH = path.join(UI_PATH, 'coverage');
 const FEATURES_PATH = path.join(CLIENT_PATH, 'features');
 const LANGUAGES_PATH = path.join(CLIENT_PATH, 'languages');
@@ -179,6 +180,7 @@ const base = {
         alias: {
             '~assets': ASSETS_PATH,
             '~components': COMPONENTS_PATH,
+            '~config': CONFIG_PATH,
             '~features': FEATURES_PATH,
             '~models': MODELS_PATH,
             '~node_modules': NODE_MODULES_PATH,

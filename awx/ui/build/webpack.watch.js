@@ -12,7 +12,7 @@ const TARGET_HOST = _.get(process.env, 'npm_package_config_django_host', 'https:
 const TARGET = `https://${TARGET_HOST}:${TARGET_PORT}`;
 const OUTPUT = 'js/[name].js';
 
-const development = require('./webpack.development');
+const base = require('./webpack.base');
 
 const watch = {
     cache: true,
@@ -42,7 +42,12 @@ const watch = {
                 files: ['package.json']
             }
         }),
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.DefinePlugin({
+            'process.env': {
+                NODE_ENV: JSON.stringify('development')
+            }
+        })
     ],
     devServer: {
         hot: true,
@@ -68,4 +73,4 @@ const watch = {
     }
 };
 
-module.exports = merge(development, watch);
+module.exports = merge(base, watch);
