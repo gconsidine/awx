@@ -53,6 +53,7 @@ module.exports = {
         'no-multiple-empty-lines': ['error', { max: 1 }],
         'object-curly-newline': 'off',
         'space-before-function-paren': ['error', 'always'],
-        'no-trailing-spaces': ['error']
+        'no-trailing-spaces': ['error'],
+        'import/newline-after-import': 'off',
     }
 };

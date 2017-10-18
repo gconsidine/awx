@@ -16,7 +16,7 @@ const base = require('./webpack.base');
 
 const watch = {
     cache: true,
-    devtool: 'cheap-source-map',
+    devtool: 'eval-source-map',
     output: {
         filename: OUTPUT
     },

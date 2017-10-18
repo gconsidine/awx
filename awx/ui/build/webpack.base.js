@@ -23,6 +23,7 @@ const SRC_PATH = path.join(CLIENT_PATH, 'src');
 const STATIC_PATH = path.join(UI_PATH, 'static');
 const TEST_PATH = path.join(UI_PATH, 'test');
 const THEME_PATH = path.join(LIB_PATH, 'theme');
+const UTIL_PATH = path.join(LIB_PATH, 'util');
 
 const APP_ENTRY = path.join(SRC_PATH, 'app.js');
 const VENDOR_ENTRY = path.join(SRC_PATH, 'vendor.js');
@@ -189,6 +190,7 @@ const base = {
             '~test': TEST_PATH,
             '~theme': THEME_PATH,
             '~ui': UI_PATH,
+            '~util': UTIL_PATH,
             d3$: '~node_modules/d3/d3.min.js',
             'codemirror.jsonlint$': '~node_modules/codemirror/addon/lint/json-lint.js',
             jquery: '~node_modules/jquery/dist/jquery.js',

@@ -1,4 +1,4 @@
-export default {
+module.exports = {
     log: 'debug',
     router: {
         debug: true

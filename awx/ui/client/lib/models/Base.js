@@ -1,3 +1,5 @@
+import cfg from '~util/config';
+
 let $http;
 let $q;
 let cache;
@@ -302,9 +304,9 @@ function extend (method, related) {
 }
 
 function normalizePath (resource) {
-    const version = '/api/v2/';
+    const base = cfg.get('api.current_version');
 
-    return `${version}${resource}/`;
+    return `${base}${resource}/`;
 }
 
 function isEditable () {

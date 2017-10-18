@@ -1,7 +1,10 @@
-export default {
+module.exports = {
     brand: 'AWX',
     log: 'info',
-    static: '/static/',
+    path: {
+        api: '/api/',
+        static: global.STATIC_PATH || '/static/'
+    },
     router: {
         debug: false,
     },

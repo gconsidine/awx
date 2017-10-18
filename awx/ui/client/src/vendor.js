@@ -1,3 +1,5 @@
+import config from '~util/config';
+
 // Theme
 require('~assets/custom-theme/jquery-ui-1.10.3.custom.min.css');
 require('~assets/ansible-bootstrap.min.css');
@@ -52,3 +54,9 @@ require('ng-toast-provider');
 require('ng-toast-directives');
 require('ng-toast');
 require('lr-infinite-scroll');
+
+const { trace } = require('angular-ui-router');
+
+if (config.get('ui.router.debug')) {
+    trace.enable();
+}

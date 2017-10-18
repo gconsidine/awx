@@ -1,7 +1,7 @@
-const _ = require('lodash');
 const webpack = require('webpack');
+const merge = require('webpack-merge');
 
-const STATIC_URL = '/static/';
+const STATIC_PATH = '/static/';
 
 const base = require('./webpack.base');
 
@@ -9,7 +9,7 @@ const test = {
     devtool: 'cheap-source-map',
     plugins: [
         new webpack.DefinePlugin({
-            $basePath: STATIC_URL,
+            STATIC_PATH,
             'process.env': {
                 NODE_ENV: JSON.stringify('development')
             }
@@ -17,7 +17,5 @@ const test = {
     ]
 };
 
-test.plugins = base.plugins.concat(test.plugins);
-
-module.exports = _.merge(base, test);
+module.exports = merge(base, test);
 

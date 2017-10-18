@@ -8,4 +8,4 @@ import ConfigService from './config.service';
 
 export default
     angular.module('config', [])
-        .service('ConfigService', ConfigService);
+        .service('OldConfigService', ConfigService);
