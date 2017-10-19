@@ -1,4 +1,5 @@
 module.exports = {
+    title: 'Ansible AWX',
     brand: 'AWX',
     log: 'info',
     path: {

@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import path from 'path';
+import { join } from 'path';
 
 const ENV = process.env.NODE_ENV || 'development';
 const base = require('~config/config.base');
@@ -24,11 +24,29 @@ try {
 } catch (err) { } // eslint-disable-line no-empty
 
 function init () {
+    return fetchApiRoot()
+        .then(fetchApiCurrentResourceList);
+}
+
+function fetchApiRoot () {
     return new Promise((resolve, reject) => {
-        const request = $.ajax(path.join(get('ui.path.api')));
+        const request = $.ajax(join(get('ui.path.api')));
 
         request.done(res => {
-            config.api = res;
+            _.set(config, 'api.root', res);
+            resolve();
+        });
+
+        request.fail(err => reject(err));
+    });
+}
+
+function fetchApiCurrentResourceList () {
+    return new Promise((resolve, reject) => {
+        const request = $.ajax(join(get('api.root.current_version')));
+
+        request.done(res => {
+            _.set(config, 'api.resources', res);
             resolve();
         });
 

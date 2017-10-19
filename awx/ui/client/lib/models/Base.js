@@ -304,7 +304,7 @@ function extend (method, related) {
 }
 
 function normalizePath (resource) {
-    const base = cfg.get('api.current_version');
+    const base = cfg.get('api.root.current_version');
 
     return `${base}${resource}/`;
 }

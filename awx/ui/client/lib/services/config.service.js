@@ -1,19 +1,20 @@
 import _ from 'lodash';
+import config from '~util/config';
 
 function ConfigService (CONFIG, ConfigModel) {
-    this.config = CONFIG;
-    this.configModelPromise = new ConfigModel('get');
+    this.config = config.get();
 
-    this.init = () => this.configModelPromise
+    this.init = () => new ConfigModel('get')
         .then(model => {
-            this.config.api = _.merge(this.config.api, model.get());
+            _.set(this.config, 'api.config', model.get());
         });
 
-    this.refresh = () => {
-        this.configModelPromise = new ConfigModel('get');
+    this.refresh = () => config.init()
+        .then(() => {
+            this.config = config.get();
 
-        return this.init();
-    };
+            return this.init();
+        });
 
     this.get = key => _.get(this.config, key);
     this.has = key => _.has(this.config, key);
