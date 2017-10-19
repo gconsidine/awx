@@ -142,9 +142,12 @@
                              }
 
                          })
-                         .catch( (error) => {
-                             console.log(error);
-                         })
+                         .catch(({data, status}) => {
+                            ProcessErrors(scope, data, status, null, {
+                                hdr: 'Error!',
+                                msg: 'Failed to get ' + url + '. OPTIONS status: ' + status
+                            });
+                        });
                  }, 5000);
              }
          };

@@ -275,8 +275,11 @@ export default
                                 }));
                                 $scope.credential_types = credential_types;
                             })
-                            .catch( (error) => {
-                                console.log(error);
+                            .catch(({data, status}) => {
+                                ProcessErrors(scope, data, status, null, {
+                                    hdr: 'Error!',
+                                    msg: 'Failed to get ' + url + '. OPTIONS status: ' + status
+                                });
                             });
 
                             // Figure out which step the user needs to start on
