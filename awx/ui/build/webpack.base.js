@@ -83,6 +83,14 @@ const base = {
                 })
             },
             {
+                test: [
+                    require.resolve('angular-moment'),
+                    require.resolve('angular-scheduler'),
+                    /ngToast\.js$/
+                ],
+                use: 'imports-loader?define=>false&module=>false&this=>window'
+            },
+            {
                 test: /lib\/theme\/index.less$/,
                 use: ExtractTextPlugin.extract({
                     use: ['css-loader', 'less-loader']
@@ -187,6 +195,7 @@ const base = {
             '~test': TEST_PATH,
             '~theme': THEME_PATH,
             '~ui': UI_PATH,
+            'angular$': '~node_modules/angular/angular.js',
             d3$: '~node_modules/d3/d3.min.js',
             'codemirror.jsonlint$': '~node_modules/codemirror/addon/lint/json-lint.js',
             jquery: '~node_modules/jquery/dist/jquery.js',
@@ -195,9 +204,7 @@ const base = {
             'js-yaml$': '~node_modules/js-yaml/dist/js-yaml.min.js',
             'lr-infinite-scroll$': '~node_modules/lr-infinite-scroll/lrInfiniteScroll.js',
             'angular-tz-extensions$': '~node_modules/angular-tz-extensions/lib/angular-tz-extensions.js',
-            'ng-toast-provider$': '~node_modules/ng-toast/src/scripts/provider.js',
-            'ng-toast-directives$': '~node_modules/ng-toast/src/scripts/directives.js',
-            'ng-toast$': '~node_modules/ng-toast/src/scripts/module.js'
+            'ng-toast$': '~node_modules/ng-toast/dist/ngToast.js'
         }
     }
 };

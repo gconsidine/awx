@@ -34,7 +34,7 @@ require('d3');
 require('nvd3');
 
 // Angular
-require('angular');
+require('@uirouter/angularjs');
 require('angular-cookies');
 require('angular-sanitize');
 require('angular-breadcrumb');
@@ -46,8 +46,5 @@ require('angular-md5');
 require('angular-moment');
 require('angular-scheduler');
 require('angular-tz-extensions');
-require('@uirouter/angularjs');
-require('ng-toast-provider');
-require('ng-toast-directives');
 require('ng-toast');
 require('lr-infinite-scroll');
