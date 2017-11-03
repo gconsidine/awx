@@ -4,6 +4,7 @@ import Base from '~models/Base';
 import Config from '~models/Config';
 import Credential from '~models/Credential';
 import CredentialType from '~models/CredentialType';
+import Jobs from '~models/Jobs';
 import Me from '~models/Me';
 import Organization from '~models/Organization';
 import Project from '~models/Project';
@@ -25,6 +26,7 @@ angular
     .service('ConfigModel', Config)
     .service('CredentialModel', Credential)
     .service('CredentialTypeModel', CredentialType)
+    .service('JobsModel', Jobs)
     .service('MeModel', Me)
     .service('OrganizationModel', Organization)
     .service('ProjectModel', Project)
