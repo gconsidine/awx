@@ -11,6 +11,7 @@ import InventoryScript from '~models/InventoryScript';
 import InventorySource from '~models/InventorySource';
 import Job from '~models/Job';
 import JobTemplate from '~models/JobTemplate';
+import Jobs from '~models/Jobs';
 import Me from '~models/Me';
 import ModelsStrings from '~models/models.strings';
 import NotificationTemplate from '~models/NotificationTemplate';
@@ -39,6 +40,7 @@ angular
     .service('InventorySourceModel', InventorySource)
     .service('JobModel', Job)
     .service('JobTemplateModel', JobTemplate)
+    .service('JobsModel', Jobs)
     .service('MeModel', Me)
     .service('ModelsStrings', ModelsStrings)
     .service('NotificationTemplate', NotificationTemplate)
