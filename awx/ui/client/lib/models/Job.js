@@ -1,15 +1,15 @@
-let Base;
+let BaseModel;
 
 function JobModel (method, resource, config) {
-    Base.call(this, 'jobs');
+    BaseModel.call(this, 'jobs');
 
     this.Constructor = JobModel;
 
     return this.create(method, resource, config);
 }
 
-function JobModelLoader (BaseModel) {
-    Base = BaseModel;
+function JobModelLoader (_BaseModel_) {
+    BaseModel = _BaseModel_;
 
     return JobModel;
 }

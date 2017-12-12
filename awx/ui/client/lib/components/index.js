@@ -22,6 +22,7 @@ import row from '~components/list/row.directive';
 import rowItem from '~components/list/row-item.directive';
 import rowAction from '~components/list/row-action.directive';
 import modal from '~components/modal/modal.directive';
+import outputStdout from '~components/output/stdout.directive';
 import panel from '~components/panel/panel.directive';
 import panelBody from '~components/panel/body.directive';
 import panelHeading from '~components/panel/heading.directive';
@@ -65,6 +66,7 @@ angular
     .directive('atRowItem', rowItem)
     .directive('atRowAction', rowAction)
     .directive('atModal', modal)
+    .directive('atOutputStdout', outputStdout)
     .directive('atPanel', panel)
     .directive('atPanelBody', panelBody)
     .directive('atPanelHeading', panelHeading)
