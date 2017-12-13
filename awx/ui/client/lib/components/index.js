@@ -1,6 +1,10 @@
 import atLibServices from '~services';
 
 import actionGroup from '~components/action/action-group.directive';
+import codeMenuBottom from '~components/code/menu-bottom.directive';
+import codeMenuTop from '~components/code/menu-top.directive';
+import codeEvents from '~components/code/events.directive';
+import codeStdout from '~components/code/stdout.directive';
 import divider from '~components/utility/divider.directive';
 import form from '~components/form/form.directive';
 import formAction from '~components/form/action.directive';
@@ -22,7 +26,6 @@ import row from '~components/list/row.directive';
 import rowItem from '~components/list/row-item.directive';
 import rowAction from '~components/list/row-action.directive';
 import modal from '~components/modal/modal.directive';
-import outputStdout from '~components/output/stdout.directive';
 import panel from '~components/panel/panel.directive';
 import panelBody from '~components/panel/body.directive';
 import panelHeading from '~components/panel/heading.directive';
@@ -45,6 +48,10 @@ angular
         atLibServices
     ])
     .directive('atActionGroup', actionGroup)
+    .directive('atCodeEvents', codeEvents)
+    .directive('atCodeMenuBottom', codeMenuBottom)
+    .directive('atCodeMenuTop', codeMenuTop)
+    .directive('atCodeStdout', codeStdout)
     .directive('atDivider', divider)
     .directive('atForm', form)
     .directive('atFormAction', formAction)
@@ -66,7 +73,6 @@ angular
     .directive('atRowItem', rowItem)
     .directive('atRowAction', rowAction)
     .directive('atModal', modal)
-    .directive('atOutputStdout', outputStdout)
     .directive('atPanel', panel)
     .directive('atPanelBody', panelBody)
     .directive('atPanelHeading', panelHeading)
