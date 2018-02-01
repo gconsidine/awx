@@ -1,6 +1,6 @@
 import atLibServices from '~services';
 
-
+import AdHocCommand from '~models/AdHocCommand';
 import Base from '~models/Base';
 import Config from '~models/Config';
 import Credential from '~models/Credential';
@@ -19,6 +19,8 @@ import NotificationTemplate from '~models/NotificationTemplate';
 import Organization from '~models/Organization';
 import Project from '~models/Project';
 import Schedule from '~models/Schedule';
+import ProjectUpdate from '~models/ProjectUpdate';
+import SystemJob from '~models/SystemJob';
 import UnifiedJobTemplate from '~models/UnifiedJobTemplate';
 import WorkflowJob from '~models/WorkflowJob';
 import WorkflowJobTemplate from '~models/WorkflowJobTemplate';
@@ -32,6 +34,7 @@ angular
     .module(MODULE_NAME, [
         atLibServices
     ])
+    .service('AdHocCommandModel', AdHocCommand)
     .service('BaseModel', Base)
     .service('ConfigModel', Config)
     .service('CredentialModel', Credential)
@@ -46,15 +49,16 @@ angular
     .service('JobTemplateModel', JobTemplate)
     .service('JobsModel', Jobs)
     .service('MeModel', Me)
+    .service('ModelsStrings', ModelsStrings)
     .service('NotificationTemplate', NotificationTemplate)
     .service('OrganizationModel', Organization)
     .service('ProjectModel', Project)
     .service('ScheduleModel', Schedule)
+    .service('ProjectUpdateModel', ProjectUpdate)
+    .service('SystemJobModel', SystemJob)
     .service('UnifiedJobTemplateModel', UnifiedJobTemplate)
     .service('WorkflowJobModel', WorkflowJob)
     .service('WorkflowJobTemplateModel', WorkflowJobTemplate)
-    .service('WorkflowJobTemplateNodeModel', WorkflowJobTemplateNode)
-    .service('WorkflowJobTemplateNodeModel', WorkflowJobTemplateNode)
-    .service('ModelsStrings', ModelsStrings);
+    .service('WorkflowJobTemplateNodeModel', WorkflowJobTemplateNode);
 
 export default MODULE_NAME;
