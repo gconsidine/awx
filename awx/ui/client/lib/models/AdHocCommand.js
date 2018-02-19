@@ -1,7 +1,7 @@
 let BaseModel;
 
 function AdHocCommandModel (method, resource, config) {
-    BaseModel.call(this, 'jobs');
+    BaseModel.call(this, 'ad_hoc_commands');
 
     this.Constructor = AdHocCommandModel;
 
